@@ -5,18 +5,24 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
 	http://www.springframework.org/schema/mvc 
       http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
-      
-      
-   <bean id="projectControl" class="com.kkc.projectControll.ProjectControl"></bean>
-   
-   
-   
-   <mvc:annotation-driven>
+
+
+	<bean id="projectControl"
+		class="com.kkc.projectControll.ProjectControl">
+		<property name="sps" ref="setProj"></property>
+	</bean>
+	<bean id="setProj"
+		class="com.kkc.projectService.SetProjectService">
+	</bean>
+
+
+
+	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean
 				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
 
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-	
-   </beans>
+
+</beans>

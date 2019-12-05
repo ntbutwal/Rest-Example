@@ -8,8 +8,6 @@ public class ProjectService {
 		dp.setId(10001);
 		dp.setEmail("ntbutwal@gmail.com");
 		dp.setLocation("Tysons Corner");
-
 	}
-	
 
 }
